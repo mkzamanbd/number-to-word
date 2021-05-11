@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Number to word</title>
+</head>
+	<body>
+		<input type="text" id="bangla_value" onkeyup="bangla()" placeholder="Bangla Number" />
+		<p id="bangla"></p>
+		<input type="text" id="english_value" onkeyup="english()" placeholder="English Number" />
+		<p id="english"></p>
+	</body>
+	<script type="text/javascript" src="bangla.js"></script>
+	<script type="text/javascript" src="english.js"></script>
+	
+	<script type="text/javascript">
+		function bangla(){
+			var bd_val=document.getElementById('bangla_value').value;
+			document.getElementById('bangla').innerHTML=inWordbn(bd_val) + ' টাকা';
+			console.log(inWordbn(bd_val));
+		}
+		function english(){
+			var en_val=document.getElementById('english_value').value;
+			document.getElementById('english').innerHTML=inWorden(en_val) + ' TK';
+			console.log(inWorden(en_val));
+		}
+	</script>
+</html>
